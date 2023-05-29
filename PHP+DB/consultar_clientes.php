@@ -22,7 +22,7 @@
     <?php
         
     while($cliente = mysqli_fetch_assoc($consulta)){
-        echo $cliente['id'].$cliente['nombre'].$cliente['apellido'].$cliente['email'].$cliente['telefono'].$cliente['genero'].'<br>';
+        echo $cliente['usuDocumento'].$cliente['usuNombre'].$cliente['usuApellido'].$cliente['usuEmail'].$cliente['usuTelefono'].$cliente['usuGenero'].'<br>';
     }
         
     ?>

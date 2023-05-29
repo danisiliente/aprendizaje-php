@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* CONSULTA */
+
+body {
+    background: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 100vh;
+    border: 1px solid white; 
+    box-sizing: border-box;
+    margin: 5vh;
+}
+
+body h3 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+table {
+    width: 95%;
+    text-align: center;
+}
+
+.titular {
+    font-size: 25px;
+    color: darkred;
+}
+
+.enunciado {
+    font-size: 20px;
+}
+
+.regresar {
+    margin-bottom: 50px;
+    color: red;
+}
+
+.eliminar {
+    color: red;
+}

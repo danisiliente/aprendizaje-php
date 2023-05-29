@@ -11,7 +11,7 @@ function obtener_clientes(){
         require 'database.php';
         
         //2. Escribir la consulta o query SQL
-        $sql = "SELECT * FROM clientes;";
+        $sql = "SELECT * FROM tbusuarios;";
 
         //Hacer la consulta
         $consulta = mysqli_query($db, $sql);
@@ -36,7 +36,7 @@ function obtener_clientes(){
 
 function conectar_db(){
 
-    $db = mysqli_connect('localhost', 'root', '', 'hotel');
+    $db = mysqli_connect('localhost', 'root', '', 'techinn');
 
     if(!$db){
         'No se pudo conectar a la base de datos';

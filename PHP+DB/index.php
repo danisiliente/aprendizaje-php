@@ -15,9 +15,8 @@
     <img src="build/img/morfeo.png" alt="morfeo">
     <div class="opciones">
         <a class="red" href="admin/clientes/crear.php">Crear cliente</a>
-        <a class="blue" href="https://onlyfans.com">Otras cositas</a>
+        <a class="blue" href="admin/clientes/seleccionar.php">Listar clientes</a>
     </div>
     
-
 </body>
 
