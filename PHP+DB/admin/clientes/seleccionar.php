@@ -61,10 +61,10 @@ $resultado_consulta = mysqli_query($bd, $consulta);
         <td class="enunciado"> <?php echo $cliente['usuTelefono'];?></td>
         <td class="enunciado"> <?php echo $cliente['usuGenero'];?></td>
         <td class="enunciado"> <?php echo $cliente['usuEstado'];?></td>
-        <td class="enunciado"> <?php echo $cliente['tipUsId'];?></td>
+        <td class="enunciado"> <?php echo $cliente['tipUsuId'];?></td>
         <td class="enunciado">
-            <a class="eliminar" href="">Eliminar</a>
-            <a class="actualizar" href="/admin/clientes/actualizar.php?id=<?php echo $cliente['usuDocumento'];?>">Actualizar</a>
+            <a class="eliminar" href="eliminar.php?codigo=<?php echo $cliente['usuDocumento'];?>">Eliminar</a>
+            <a class="actualizar" href="actualizar.php?codigo=<?php echo $cliente['usuDocumento'];?>">Actualizar</a>
             <?php } ?>
         </td>
         

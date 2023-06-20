@@ -20,8 +20,8 @@ $errores =  [];
         $email = $_POST['usuEmail'];
         $telefono = $_POST['usuTelefono'];
         $genero = $_POST['usuGenero'];
-        // $estado = $_POST['usuEstado'];
-        // $tipou = $_POST['tipoUsId'];
+        $estado = $_POST['usuEstado'];
+        $tipou = $_POST['tipoUsuId'];
 
         if(!$documento){
             $errores[] = 'El número de identificación es obligatorio';
@@ -41,18 +41,18 @@ $errores =  [];
         if(!$genero){
             $errores[] = 'El género es obligatorio';
         }
-        // if(!$estado){
-        //     $errores[] = 'El estado es obligatorio';
-        // }
-        // if(!$tipou){
-        //     $errores[] = 'El tipo de usuario es obligatorio';
-        // }
+        if(!$estado){
+            $errores[] = 'El estado es obligatorio';
+        }
+        if(!$tipou){
+            $errores[] = 'El tipo de usuario es obligatorio';
+        }
         
         if(empty($errores)){
         //Insertar los datos a la BD
         
-            $sql = "INSERT INTO tbusuarios(usuDocumento, usuNombre, usuApellido, usuEmail, usuTelefono, usuGenero, usuEstado, tipUsId) 
-            VALUES ($documento, '$nombre', '$apellido', '$email', '$telefono', '$genero', 'Activo', 3)" ;
+            $sql = "INSERT INTO tbusuarios(usuDocumento, usuNombre, usuApellido, usuEmail, usuTelefono, usuGenero, usuEstado, tipUsuId) 
+            VALUES ($documento, '$nombre', '$apellido', '$email', '$telefono', '$genero', '$estado', $tipou)" ;
 
             echo $sql;
 
@@ -108,11 +108,11 @@ $errores =  [];
                 <label for="usuGenero">Género:</label><br>
                 <input type="text" id="usuGenero" name="usuGenero" ><br>
 
-                <!-- <label for="usuEstado">Estado:</label><br>
+                <label for="usuEstado">Estado:</label><br>
                 <input type="text" id="usuEstado" name="usuEstado" ><br>
 
-                <label for="tipUsId">TipoU:</label><br>
-                <input type="number" id="tipUsId" name="tipUsId" ><br> -->
+                <label for="tipUsuId">TipoU:</label><br>
+                <input type="number" id="tipUsuId" name="tipUsuId" ><br>
 
                 <input class="boton" type="submit" id="enviar" name="enviar" value="Enviar datos">
             </fieldset>

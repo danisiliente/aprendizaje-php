@@ -4,7 +4,7 @@
 
 function conectar_db(){
 
-    $db = mysqli_connect('localhost', 'root', '', 'hotel');
+    $db = mysqli_connect('localhost', 'root', '', 'techinn');
 
     if(!$db){
         'No se pudo conectar a la base de datos';
