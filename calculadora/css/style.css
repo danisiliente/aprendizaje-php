@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: gray;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-image: url("./img/15167.png"); */
+}
+
+body h3,
+p {
+    font-size: 40px;
+}
+
+h4 {
+    color: darkred;
+}
+
+body span,
+a {
+    color: darkred;
+}
+
+body img {
+    height: 200px;
+    width: 200px;
+}
+
+body div .blue {
+    font-size: 20px;
+    margin-left: 10px;
+    color: blue;
+}
+
+body div .red {
+    font-size: 20px;
+    margin-right: 10px;
+    color: red;
+}
+
+
+/* FORMULARIO */
+
+form {
+    text-align: center;
+    font-size: 20px;
+}
+
+form legend {
+    font-size: 30px;
+}
+
+form fieldset {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+form fieldset input,
+select {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 90%;
+    height: 30px;
+}
+
+form fieldset input {
+    text-align: center;
+}
+
+form fieldset select {
+    width: 15%;
+}
+
+form fieldset .boton {
+    color: white;
+    background-color: darkred;
+    padding: 5px;
+    margin-top: 10px;
+    width: 40%;
+}
+
+form fieldset .boton:hover {
+    background-color: red;
+    cursor: pointer;
+}
