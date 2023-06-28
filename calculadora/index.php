@@ -4,24 +4,27 @@ class Calculadora {
 
     public function calcular($numero1, $numero2, $operador) {
 
-            if ($operador == '+') {
-                $resultado = $numero1 + $numero2;
-            }
-            elseif ($operador == '-') {
-                $resultado = $numero1 - $numero2;
-            }
-            elseif ($operador == '*') {
-                $resultado = $numero1 * $numero2;
-            }
-            elseif ($operador == '/') {
-                $resultado = $numero1 / $numero2;
-            }
+        if ($operador == '+') {
+            $resultado = $numero1 + $numero2;
+        }
+        elseif ($operador == '-') {
+            $resultado = $numero1 - $numero2;
+        }
+        elseif ($operador == '*') {
+            $resultado = $numero1 * $numero2;
+        }
+        elseif ($operador == '/') {
+            $resultado = $numero1 / $numero2;
+        }
 
         return $resultado;
-
     }
-
 }
+
+$numero1 = '';
+$numero2 = '';
+$operador = '';
+$resultado = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numero1 = $_POST["numero1"];
@@ -50,14 +53,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <a href="https://www.youtube.com/watch?v=5Y6K3bdfbeo">Regresar</a>
 
-        <form class="formulario" method="POST" action="./index.php"                                                                                                                                               ">
+        <form class="formulario" method="POST" action="./index.php">
             <fieldset>
                 <legend>Valores</legend>
                 <label for="numero1">No.1</label><br>
-                <input type="numeric" id="numero1" name="numero1"><br>
+                <input type="number" id="numero1" name="numero1" value="<?php echo $numero1; ?>" required><br>
 
                 <label for="numero2">No.2</label><br>
-                <input type="numeric" id="numero2" name="numero2"><br>
+                <input type="number" id="numero2" name="numero2" value="<?php echo $numero2; ?>" required><br>
 
                 <select name="operador"> 
                     <option value="+">+</option>
@@ -65,17 +68,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="*">*</option>
                     <option value="/">/</option>
                 </select>
-                <a href="./resultado.php"><input class="boton" type="submit" id="enviar" name="enviar" value="Enviar"></a>
+                <input class="boton" type="submit" id="enviar" name="enviar" value="Enviar">
             </fieldset>
 
             <h4>Resultado</h4>
 
             <?php
-                echo $resultado; 
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    echo $resultado;
+                }
             ?>
-
+            
         </form>
-
     </div>
 </body>
 </html>
