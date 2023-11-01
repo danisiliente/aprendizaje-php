@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id('id_country');
-            $table->string('code_country')->unique();
-            $table->string('name_country');
+            $table->string('country_code', 10)->unique();
+            $table->string('country_name', 50);
+            $table->timestamps();
         });
     }
 
