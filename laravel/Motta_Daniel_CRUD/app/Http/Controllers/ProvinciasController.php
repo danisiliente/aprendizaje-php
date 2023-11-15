@@ -35,7 +35,7 @@ class ProvinciasController extends Controller
      */
     public function store(Request $request)
     {
-        Paises::create(
+        Provincias::create(
             $request->all()
         );
 

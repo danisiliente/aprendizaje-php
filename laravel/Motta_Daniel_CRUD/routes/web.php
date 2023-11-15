@@ -21,5 +21,5 @@ Route::get('/', function () {
 });
 
 Route::resource("/paises", PaisesController::class);
-Route::resource("/provincias", PaisesController::class);
-Route::resource("/ciudades", PaisesController::class);
+Route::resource("/provincias", ProvinciasController::class);
+Route::resource("/ciudades", CiudadesController::class); 

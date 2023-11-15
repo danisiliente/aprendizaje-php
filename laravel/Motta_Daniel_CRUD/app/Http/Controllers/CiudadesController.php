@@ -14,7 +14,7 @@ class CiudadesController extends Controller
      */
     public function index()
     {
-        //
+        return view('ciudades/index');
     }
 
     /**
@@ -24,7 +24,7 @@ class CiudadesController extends Controller
      */
     public function create()
     {
-        //
+        return view('ciudades/create');
     }
 
     /**
@@ -35,7 +35,12 @@ class CiudadesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Ciudades::create(
+            $request->all()
+        );
+
+        return redirect()->back()
+            ->with('success','Creado correctamenchi');
     }
 
     /**

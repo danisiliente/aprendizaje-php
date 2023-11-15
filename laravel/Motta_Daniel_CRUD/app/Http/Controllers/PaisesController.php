@@ -35,14 +35,12 @@ class PaisesController extends Controller
      */
     public function store(Request $request)
     {
-        
         Paises::create(
             $request->all()
         );
 
         return redirect()->back()
             ->with('success','Creado correctamenchi');
-
     }
 
     /**

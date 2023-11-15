@@ -12,14 +12,14 @@
 
     <div class="mb-3">
       <label for="exampleInputEmail1"class="form-label">
-        ID País:
+        ID Pais:
       </label>
       <input
         id="exampleInputEmail1" aria-describedby="emailHelp"
-        name="codigo"
+        name="id_pais"
         type="text"
         class="form-control"
-        value="{{ old('codigo') }}"
+        value="{{ old('id_pais') }}"
       >
         @error('codigo')
           <h6 class="alert alert-danger p-2 mt-2">{{ $message }}</h6>
